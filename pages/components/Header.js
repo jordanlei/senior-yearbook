@@ -74,7 +74,7 @@ class Header extends Component{
     
     var headerStyle={position: "fixed", 
     width: "100vw", 
-    backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0))",
+    backgroundImage: "linear-gradient(rgba(16, 34, 88, 0.4), rgba(0, 0, 0, 0))",
     zIndex:"2"
     }
 

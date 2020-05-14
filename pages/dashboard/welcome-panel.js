@@ -13,7 +13,7 @@ class WelcomePanel extends Component {
   render() {
     return (
         <div className= "dashboard-container" 
-        style= {{backgroundImage: "linear-gradient(rgb(8, 17, 44), rgba(16, 34, 88))  " , 
+        style= {{backgroundImage: "linear-gradient(rgba(16, 34, 88), rgba(2, 4, 11))  " , 
                  paddingTop: "5vh"}}>
         <Row>
           <Col md={2}>
