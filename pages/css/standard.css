@@ -1,0 +1,177 @@
+.layout{
+  overflow: hidden;
+  position: relative;
+  font-family: "Open Sans", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+}
+
+.center-row{
+  text-align: center;
+}
+
+.center-div{
+  margin: 0 auto;
+  width: 200px;
+}
+
+.right-row{
+  text-align: right;
+}
+
+.layout h1{
+	text-transform: none;
+	font-weight: lighter;
+	font-size: 5em;
+	letter-spacing: 4px;
+}
+
+.layout h2{
+    text-transform: none;
+    font-weight: lighter;
+    font-size: 4em;
+    letter-spacing: 2px;
+}
+
+.layout h3{
+	text-transform: none;
+	font-weight: lighter;
+  font-size: 3.5em;
+  letter-spacing: 1px;
+}
+
+.layout h4{
+	text-transform: none;
+	font-weight: lighter;
+  font-size: 2.5em;
+  letter-spacing: 1px;
+}
+
+.layout h5{
+	text-transform: none;
+	font-weight: lighter;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+
+.layout h6{
+	text-transform: none;
+	font-weight: lighter;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.layout p{
+	text-transform: none;
+	font-weight: lighter;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.dropdown-item:hover{background-color: rgba(0, 0, 0, 0.2);}
+
+.dark-container{
+  color: rgba(255, 255, 255, 0.9);
+  background-color:rgba(0, 0, 0, 0.9); 
+  padding: 5%;
+  padding-left: 10%;
+  padding-right:10%;
+}
+
+.light-container{
+  background-color: rgb(224, 226, 231);
+  color:rgba(0, 0, 0, 0.9); 
+  padding: 5%;
+  padding-left: 10%;
+  padding-right:10%;
+  font-weight: 300;
+}
+
+.experience-container{
+  background-image: linear-gradient(rgb(213, 218, 230), rgb(171, 178, 197), rgb(137, 151, 187));
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:rgba(0, 0, 0, 0.9); 
+  padding: 5%;
+  padding-left: 10%;
+  padding-right:10%;
+  font-weight: 300;
+}
+
+.art-banner-container{
+  background-image: linear-gradient(rgb(36, 52, 88), rgb(8, 17, 44));
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgba(255, 255, 255, 0.9); 
+  padding: 5%;
+  padding-left: 30%;
+  padding-right: 30%;
+  font-weight: 300;
+}
+
+.project-card{
+  padding: 10%;
+  margin-bottom: 8%;
+  background-image: linear-gradient(rgb(234, 238, 245), rgb(154, 164, 180));
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.light-text{
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.dark-text{
+  color:rgba(0, 0, 0, 0.9); 
+}
+
+.hover-card:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.dotted-background{
+  background-image: url("/static/dotted-background.png");
+}
+
+.my-spinner{
+  background-image: url("/static/spinny-base.png");
+  background-size: cover; 
+  background-position: absolute;
+  width: 200px; 
+  height: 200px;
+}
+
+.my-loader {
+  background-image: url("/static/spinny-fan.png");
+  background-size: cover; 
+  background-position: absolute;
+  width: 200px;
+  height: 200px;
+  -webkit-animation: spin 1s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
+}
+
+.classof-card a:hover{
+  text-decoration: none;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+

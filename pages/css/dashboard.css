@@ -1,0 +1,23 @@
+
+.btn-group a:hover{
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.menu-item{
+  background-color: rgba(0, 0, 0, 0); 
+  border: 0px;
+}
+
+.body{
+  background-color: black;
+}
+
+.dashboard-container{
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);    
+  /* transition the background-color over 1s with a linear animation */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

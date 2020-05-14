@@ -1,0 +1,4 @@
+node_modules/
+.next/
+#ignore environment files
+.env

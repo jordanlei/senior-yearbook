@@ -1,0 +1,44 @@
+{
+  "name": "heroku-nextjs-custom-server-express",
+  "version": "3.0.0",
+  "description": "Deploy Next.js server-side React apps using a custom Express server to Heroku",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js -p $PORT",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js -p $PORT"
+  },
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "bcrypt": "^4.0.1",
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^4.3.1",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.16.4",
+    "heroku": "^7.24.3",
+    "isomorphic-unfetch": "^3.0.0",
+    "jquery": "^3.5.0",
+    "js-cookie": "^2.2.0",
+    "mic-recorder-to-mp3": "^2.2.1",
+    "micro": "^9.3.4",
+    "mongodb": "^3.2.5",
+    "mongoose": "^5.7.5",
+    "morgan": "^1.9.1",
+    "next": "^8.0.3",
+    "next-cookies": "^1.1.2",
+    "react": "^16.8.6",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-dom": "^16.8.6",
+    "react-reveal": "^1.2.2",
+    "react-router-dom": "^5.0.0",
+    "reactstrap": "^8.0.0"
+  },
+  "engines": {
+    "node": "10.15.3"
+  },
+  "devDependencies": {
+    "http-proxy": "^1.17.0"
+  }
+}
