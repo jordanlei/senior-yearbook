@@ -154,7 +154,7 @@ class SettingsPanel extends Component {
     }
 
     return (
-        <div className= "dashboard-container" style= {{backgroundImage: "linear-gradient(rgba(16, 34, 88), rgba(4, 8, 22))  " , 
+        <div className= "dashboard-container" style= {{backgroundImage: "linear-gradient(rgb(0, 0, 0), rgb(12, 26, 66))  " , 
         paddingTop: "5vh"}}>
         <Row>
           <Col md={2}>

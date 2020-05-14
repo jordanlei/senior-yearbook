@@ -154,7 +154,7 @@ class Register extends Component {
         const titleStyle= {
             textAlign: 'center', 
             minHeight: "100vh", 
-            backgroundImage: "linear-gradient(rgba(16, 34, 88), rgba(4, 8, 22))  " , 
+            backgroundImage: "linear-gradient(rgb(0, 0, 0), rgb(12, 26, 66))  " , 
             color: "rgba(255, 255, 255, 0.9)",
             backgroundAttachment: "fixed",     
             backgroundSize: "cover"
