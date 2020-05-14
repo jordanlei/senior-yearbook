@@ -321,7 +321,11 @@ class ProfilePanel extends Component {
 
                     <FormGroup>
                         <Label for="avatar">Profile Photo Url <br/> 
-                        (try uploading to Imgur, right click "Open Image in New Tab")</Label>
+                          To get a photo url, right-click on an image and select 
+                          "Open Image in New Tab". Then copy the url and paste it here. 
+                          This can be done for most Facebook images. Alternatively, 
+                          upload your image to Imgur, and do the same process.
+                        </Label>
                         <Input
                             type="text"
                             id="avatar"
