@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, ButtonGroup, Row, Col} from 'reactstrap';
+import { Button, ButtonGroup, Row, Col, Alert} from 'reactstrap';
 import { Link } from 'react-router-dom';
 import DashboardMenu from './dashboard-menu';
 import Fade from 'react-reveal/Fade';
@@ -11,6 +11,15 @@ class WelcomePanel extends Component {
   }
 
   render() {
+    if(!this.props.data.isLive){
+      var warnactive = 
+      <Alert style={{margin: "5%"}} color="danger">
+        Note: your profile isn't active, so others can't view 
+        your page, but you can still post as a user. 
+        You can change this in Settings.
+      </Alert>
+    }
+    else var warnactive= <div></div>
     return (
         <div className= "dashboard-container" 
         style= {{backgroundImage: "linear-gradient(rgb(0, 0, 0), rgb(12, 26, 66))  " , 
@@ -26,6 +35,7 @@ class WelcomePanel extends Component {
             <Fade delay= {500} duration={3000}>
             <h2>This is your dashboard.</h2>
             </Fade>
+            {warnactive}
             </div>
           </Fade> 
           </Col>

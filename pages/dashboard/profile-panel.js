@@ -274,6 +274,8 @@ class ProfilePanel extends Component {
           <Form style={{paddingLeft: "5%", paddingRight:"5%", paddingTop: "2em", paddingBottom: "10%"}}>
                     
                     <h4 style={{textAlign: "center", paddingTop: "1em"}}>General Information</h4>
+                    {errorMessage}
+                    {saveSuccess}
                     <Row>
                         <Col md={6}>
                         <FormGroup>
@@ -350,8 +352,6 @@ class ProfilePanel extends Component {
                                 Save
                         </Button>
                     </div>
-                    {errorMessage}
-                    {saveSuccess}
                 </Form>
           </div>
         </Fade>
