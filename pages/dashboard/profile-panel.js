@@ -95,9 +95,9 @@ class ProfilePanel extends Component {
             if(value.length==0){
                 this.setState({error: "Email field cannot be empty."})
             }
-            else if (!(value.includes("@") && value.includes("upenn")))
+            else if (!(value.includes("@")))
             {
-                this.setState({error: "Please enter a valid Penn email."})
+                this.setState({error: "Please enter a valid email."})
             }
             else
             {
@@ -300,7 +300,7 @@ class ProfilePanel extends Component {
                     </Row>
 
                     <FormGroup>
-                        <Label for="email">Email</Label>
+                        <Label for="email">Email (can be non-.edu)</Label>
                         <Input
                             type="email"
                             id="email"

@@ -18,6 +18,7 @@ class Register extends Component {
         email: '', 
         bio: '', 
         error: '',
+        school: '', 
         isLive: true,
         submitted: false
         };
@@ -92,7 +93,7 @@ class Register extends Component {
                 }
                 else if (!(value.includes("@") && value.includes("edu")))
                 {
-                    this.setState({error: "Please enter a valid .edu email."})
+                    this.setState({error: "Please enter a valid .edu email (you can change this later)"})
                 }
                 else
                 {
@@ -110,6 +111,7 @@ class Register extends Component {
             lastName: this.state.lastName, 
             email: this.state.email,
             bio: this.state.bio, 
+            school: this.state.school,
           };
     
         try {
