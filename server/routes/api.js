@@ -93,7 +93,6 @@ router.post('/updateuser', function(req, res, next) {
   var searchname = req.body.username;
   // find the policymaker
   console.log("Updating User")
-  console.log(req.body)
   User.findOneAndUpdate({ username: searchname }, req.body, {new: true},  (err, user) => {
     if (err) {
       res.type('html').status(200);
@@ -178,7 +177,6 @@ router.post('/updatecomment', function(req, res, next) {
   var id = req.body._id;
   // find the policymaker
   console.log("Updating User")
-  console.log(req.body)
   Comment.findByIdAndUpdate(id, req.body, {new: true},  (err, user) => {
     if (err) {
       res.type('html').status(200);
@@ -217,7 +215,6 @@ router.post('/deletecomment', function(req, res, next) {
 });
 
 router.post('/findcomments', function(req, res, next) {
-  console.log(req.body)
   // find all of the policymakers
   Comment.find(req.body, (err, comments) => {
     if (err) {
@@ -229,7 +226,6 @@ router.post('/findcomments', function(req, res, next) {
       res.write('No records are available at this time.');
       res.end();
     } else {
-      console.log(comments);
       res.type('html').status(200);
       res.json(comments);
     }

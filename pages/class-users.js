@@ -26,7 +26,6 @@ class ClassUsers extends Component{
 
     async componentDidMount() {
         var json= {isLive: true}
-        console.log(json)
         try {
             const response = await fetch(`/api/findusers`, {
               method: 'POST',
@@ -138,8 +137,6 @@ class ClassUsers extends Component{
                 var query = this.state.query.toLowerCase()
                 if(user.includes(query))
                 {
-                    console.log(user)
-                    console.log(query)
                     return(
                         <Fade bottom duration={2000} delay={100}>
                         <Card className="classof-card" style={cardStyle}>

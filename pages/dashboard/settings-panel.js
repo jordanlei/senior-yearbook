@@ -95,7 +95,6 @@ class SettingsPanel extends Component {
       json.password = hash;
     } 
 
-    console.log(json)
 
     try {
       const response = await fetch(`/api/updateuser`, {

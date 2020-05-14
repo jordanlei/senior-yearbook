@@ -60,7 +60,6 @@ class CommentModal extends Component {
         lastModified: Date.now()
         });
         this.setState({audiobuffer:buffer, audiotype:blob.type, isRecording: false})
-        console.log(this.state)
 
     }).catch((e) => {
         console.error(e);
@@ -78,7 +77,6 @@ class CommentModal extends Component {
             comment: this.state.comment, 
           };
 
-        console.log(json)
         if (!this.state.firstName || this.state.firstName.length < 2){
           this.setState({error: "Error: First Name is Missing"})
         }
@@ -119,7 +117,6 @@ class CommentModal extends Component {
       }
 
     async handleUpdate(event) {
-        console.log(this.state)
         if(!this.state._id) return; 
 
         var json = {
@@ -129,7 +126,6 @@ class CommentModal extends Component {
         };
 
         console.log("Updating Comment...")
-        console.log(json)
     
         try {
           const response = await fetch(`/api/updatecomment`, {
@@ -166,7 +162,6 @@ class CommentModal extends Component {
         };
 
         console.log("Deleting Comment...")
-        console.log(json)
     
         try {
           const response = await fetch(`/api/deletecomment`, {

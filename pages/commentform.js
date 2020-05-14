@@ -41,8 +41,6 @@ class CommentForm extends Component {
             avatar: this.state.avatar,
             comment: this.state.comment, 
           };
-
-        console.log(json)
     
         try {
           const response = await fetch(`/api/createcomment`, {

@@ -47,10 +47,8 @@ class AudioButton extends Component{
     }
 
     if(this.state.audio){
-        console.log("Got here")
         var myRef = React.createRef();
         var audio=<audio controls ref={myRef} src={this.state.audio}/>
-        console.log(audio)
     }
     else
     {

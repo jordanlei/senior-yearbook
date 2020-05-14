@@ -89,8 +89,6 @@ class ViewUserPage extends Component{
                 if (response.ok) {
                 response.json().then(data => {
                     this.setState({data: data})
-                    console.log("okay")
-                    console.log(this.state.data)
                 })
                 } else {
                 // https://github.com/developit/unfetch#caveats
@@ -108,12 +106,10 @@ class ViewUserPage extends Component{
 
     editOn(state) {
         this.setState({toEdit: true, flagEdit: state, comment: state.comment});
-        console.log(this.state)
     }
 
     editOff(event) {
         this.setState({toEdit: false});
-        console.log(this.state)
     }
 
     renderCards(){
@@ -157,13 +153,11 @@ class ViewUserPage extends Component{
             }
 
             if(state.audiobuffer){
-                console.log("Got here")
                 var myRef = React.createRef();
                 var audio=<div><h1>There is audio here</h1></div>
                 // <div style={{paddingTop: "10px"}}>
                 //     <audio style={{width: "100%"}} controls ref={myRef} src={URL.createObjectURL(state.audiofile)}/>
                 // </div>
-                console.log(audio)
             }
             else
             {
@@ -281,7 +275,6 @@ class ViewUserPage extends Component{
 
     handleCancel(){
         this.setState({modalVisible: false, toEdit: undefined})
-        console.log(this.state)
     }
 
     handleShow(){

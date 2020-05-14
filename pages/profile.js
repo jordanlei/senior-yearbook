@@ -46,7 +46,6 @@ class Profile extends Component{
           displayProfile: false,
           displaySettings: false,
         });
-        console.log(panelName)
         this.setState({ [panelName]: true });
     }
 
