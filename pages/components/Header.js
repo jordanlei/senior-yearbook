@@ -90,7 +90,7 @@ class Header extends Component{
       return(
         <div style= {headerStyle}>
         <Navbar light= {this.props.light} dark= {!this.props.light} expand="md" style= {{paddingLeft: "3%", paddingRight: "3%"}}>
-          <NavbarBrand href="/"><img src="/spinny-hat.png" style={{width:"100px"}}></img></NavbarBrand>
+          <NavbarBrand href="/"><img src="/gradcap-dark.png" style={{width:"100px"}}></img></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

@@ -18,14 +18,14 @@ class App extends Component{
         color: "rgba(168, 20, 37, 0.7)", 
       }
       const spanStyle= {
-        paddingTop: "25vh",
+        paddingTop: "23vh",
         minHeight: "80vh",
       }
 
       const titleStyle= {
         textAlign: 'center', 
         minHeight: "100vh", 
-        backgroundImage: "linear-gradient( rgb(0, 0, 0), rgb(12, 26, 66)) "      
+        backgroundImage: "linear-gradient(rgb(8, 17, 44), rgba(16, 34, 88))  "      
       }
 
         return (
@@ -34,7 +34,7 @@ class App extends Component{
               
               <div style= {spanStyle}>
                 <div style={{width: "30vw", margin:"0 auto"}}>
-                <img src="/spinny-hat.png" style={{width: "300px", zIndex: "-1"}}></img>
+                <img src="/gradcap-dark.png" style={{width: "300px", zIndex: "-1"}}></img>
               </div> 
               </div>
               <div style={{top: "60vh", position: "absolute", width:"100vw"}}>

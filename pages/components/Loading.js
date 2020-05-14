@@ -20,7 +20,7 @@ class Loading extends Component{
     const titleStyle= {
       textAlign: 'center', 
       minHeight: "100vh", 
-      backgroundImage: "linear-gradient( rgb(0, 0, 0), rgb(12, 26, 66)) " , 
+      backgroundImage: "linear-gradient(rgb(8, 17, 44), rgba(16, 34, 88))  " , 
       backgroundAttachment: "fixed",     
       backgroundSize: "cover", 
       color: "rgba(255, 255, 255, 0.9)"
@@ -29,19 +29,19 @@ class Loading extends Component{
     var quote = ""
     var random = Math.random()
     if(random < 0.2){
-      quote = "You had me at Hello World..."
+      quote = "Social Distancing from Finals..."
     }
     else if (random < 0.4){
-      quote = "Chillin at the Poconos..."
+      quote = "Busy Procrastinating..."
     }
     else if (random < 0.6){
-      quote = "Practicing Elevator Pitch..."
+      quote = "Reselling Textbooks..."
     }
     else if (random < 0.8){
-      quote = "Mining Bitcoin..."
+      quote = "Getting Some Sleep (Finally)..."
     }
     else{
-      quote = "Starting Gradient Descent..."
+      quote = "Attending Zoom Graduation..."
     }
     return(
       <div className= "layout" style= {titleStyle}>

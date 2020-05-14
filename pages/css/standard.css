@@ -143,7 +143,6 @@
 }
 
 .my-spinner{
-  background-image: url("/static/spinny-base.png");
   background-size: cover; 
   background-position: absolute;
   width: 200px; 
@@ -151,13 +150,13 @@
 }
 
 .my-loader {
-  background-image: url("/static/spinny-fan.png");
+  background-image: url("/static/gradcap-dark.png");
   background-size: cover; 
   background-position: absolute;
   width: 200px;
   height: 200px;
-  -webkit-animation: spin 1s linear infinite; /* Safari */
-  animation: spin 1s linear infinite;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
 }
 
 .classof-card a:hover{
@@ -166,12 +165,21 @@
 
 /* Safari */
 @-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+  0% { -webkit-transform: translateY(0px) rotate(0deg);
+     }
+  50% {-webkit-transform: translateY(-300px) rotate(360deg) ; 
+  }
+  100% {-webkit-transform: translateY(0) rotate(720deg) ; 
+  }
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% { transform:  translateY(0px) rotate(0deg);
+  }
+  50%{
+       transform:  translateY(-300px) rotate(360deg) ;
+  }
+  100% { transform: translateY(0px) rotate(720deg) ;
+  }
 }
 
