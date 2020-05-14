@@ -212,7 +212,7 @@ class Register extends Component {
                     </FormGroup>
                     <FormGroup>
                         <Label for="password">
-                            Password
+                            Password<br/>
                             (Note: All passwords are salted and encrypted for security. 
                             That said, to be safe, please use a unique password that you don't
                             typically use for other purposes.) 
