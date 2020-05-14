@@ -15,8 +15,9 @@ class WelcomePanel extends Component {
       var warnactive = 
       <Alert style={{margin: "5%"}} color="danger">
         Note: your profile isn't active, so others can't view 
-        your page, but you can still post as a user. 
-        You can change this in Settings.
+        your page, but you can still post as a user. <br/>
+        To activate, edit your profile in "Profile", and once you're ready, 
+        you can activate your account in "Settings".
       </Alert>
     }
     else var warnactive= <div></div>
