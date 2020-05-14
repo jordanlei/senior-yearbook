@@ -243,7 +243,7 @@ class ProfilePanel extends Component {
     </div>)
 
     return (
-      <div className= "dashboard-container" style= {{backgroundImage: "linear-gradient(rgba(16, 34, 88), rgba(2, 4, 11))  " , 
+      <div className= "dashboard-container" style= {{backgroundImage: "linear-gradient(rgba(16, 34, 88), rgba(4, 8, 22))  " , 
       paddingTop: "5vh"}}>
       <Row>
         <Col md={2}>
