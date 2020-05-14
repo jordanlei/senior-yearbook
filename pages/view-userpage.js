@@ -327,7 +327,15 @@ class ViewUserPage extends Component{
                     }
                     commentmodal = <CommentModal data = {data} handleCancel= {this.handleCancel} create/>
                 }
-                
+            }
+            else{
+                button = 
+                <Button color='primary' onClick={this.handleShow}>
+                    <h4 style={{fontSize: "25px"}}>Make A Post</h4>
+                </Button>
+                if(this.state.modalVisible){
+                    commentmodal = <CommentModal data={{from: "anon", to: this.state.user.username}} handleCancel= {this.handleCancel} create anon/>
+                }
             }
         }
 

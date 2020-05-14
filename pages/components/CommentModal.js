@@ -23,6 +23,8 @@ class CommentModal extends Component {
         handleCancel: this.props.handleCancel,
         create: this.props.create,
         isRecording: false,
+        anon: this.props.anon,
+        error: "",
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -77,31 +79,42 @@ class CommentModal extends Component {
           };
 
         console.log(json)
-    
-        try {
-          const response = await fetch(`/api/createcomment`, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(json),
-          })
-    
-          if (response.ok) {
-            response.json().then(res => 
-                {
-                    this.setState({error: '', submitted: true})
-                    Router.push('/view/'+ this.state.to)
-                })
-          } else {
-            // https://github.com/developit/unfetch#caveats
-            this.setState({error: "Comment Failed"})
+        if (!this.state.firstName || this.state.firstName.length < 2){
+          this.setState({error: "Error: First Name is Missing"})
+        }
+        else if (!this.state.lastName || this.state.lastName.length < 2){
+          this.setState({error: "Error: Last Name is Missing"})
+        }
+        else if (!this.state.comment || this.state.comment.length <2 ){
+          this.setState({error: "Error: Comment is Missing"})
+        }
+        else{   
+          try {
+            const response = await fetch(`/api/createcomment`, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(json),
+            })
+      
+            if (response.ok) {
+              response.json().then(res => 
+                  {
+                      this.setState({error: '', submitted: true})
+                      Router.push('/view/'+ this.state.to)
+                  })
+            } else {
+              // https://github.com/developit/unfetch#caveats
+              this.setState({error: "Comment Failed"})
+            }
+          } catch (error) {
+            console.error(
+              'You have an error in your code or there are Network issues.',
+              error
+            )
           }
-        } catch (error) {
-          console.error(
-            'You have an error in your code or there are Network issues.',
-            error
-          )
+          
         }
       }
 
@@ -195,6 +208,13 @@ class CommentModal extends Component {
             Router.push('/view/'+ this.state.to)
         }
 
+        
+        if (this.state.error)
+        {
+           var errorMessage = <Alert color="danger">{this.state.error}</Alert>
+        }
+        else var errorMessage = <div></div>
+
         //Audio recording functionality
         if(!this.state.isRecording){
             var button=<Button color="primary" onClick={this.startRecording}>Record</Button>
@@ -246,12 +266,43 @@ class CommentModal extends Component {
             var image=<div></div>
         }
 
+        if(this.state.anon){
+          var anonInput=
+          <FormGroup>
+              <Row>
+                <Col md={6}>
+                  <h5>First Name</h5>
+                  <Input
+                    type="test"
+                    id="firstName"
+                    value={this.state.firstName}
+                    onChange={this.handleInputChange}
+                  />
+                </Col>
+                <Col md={6}>
+                  <h5>Last Name</h5>
+                  <Input
+                    type="test"
+                    id="lastName"
+                    value={this.state.lastName}
+                    onChange={this.handleInputChange}
+                  />
+                </Col>
+              </Row>
+          </FormGroup>
+        }
+        else{
+          var anonInput=<div></div>
+        }
+
         return (
             <Modal isOpen={this.state.isOpen}>
                 {header}
+                {errorMessage}
                 <ModalBody>
                 <Form style={{paddingLeft: "5%", paddingRight:"5%", paddingTop: "5%", paddingBottom: "5%"}}>
                     <div class="container text-center">
+                        {anonInput}
                         <FormGroup>
                             <h5>Leave A Comment</h5>
                             <Input
