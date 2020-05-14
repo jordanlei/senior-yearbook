@@ -374,7 +374,7 @@ class ViewUserPage extends Component{
                 <SimpleTitle>
                 <div>
                 <Fade bottom duration={3000}>
-                    <div className="text-center" style={{width: "50vw", margin:"0 auto"}}>
+                    <div className="text-center" style={{width: "50vw", margin:"0 auto", paddingTop:"2em"}}>
                         {header}   
                     </div>
                 </Fade>

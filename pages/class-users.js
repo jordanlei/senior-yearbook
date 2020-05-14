@@ -235,7 +235,7 @@ class ClassUsers extends Component{
             <SimpleTitle>
             <div>
             <Fade bottom duration={3000}>
-            <div style={{width: "50vw", margin:"0 auto"}}>
+            <div style={{width: "50vw", margin:"0 auto", paddingTop: "2em"}}>
                 <h3>Class of {this.props.year}</h3>
                 <FormGroup>
                 <Input style={{ backgroundColor: "rgba(0, 0, 0, 0)", 

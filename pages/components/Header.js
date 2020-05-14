@@ -100,6 +100,9 @@ class Header extends Component{
               <NavItem style={{marginRight: "10px"}}>
                 <NavLink href="../about"><p>About</p></NavLink>
               </NavItem>
+              <NavItem style={{marginRight: "10px"}}>
+                <NavLink href="../how"><p>How This Works</p></NavLink>
+              </NavItem>
               <UncontrolledDropdown nav inNavbar>
                <p><DropdownToggle nav caret style={{marginRight: "10px"}}>
                {this.state.data.firstName}
@@ -137,6 +140,9 @@ class Header extends Component{
               </NavItem>
               <NavItem style={{marginRight: "10px"}}>
                 <NavLink href="../about"><p>About</p></NavLink>
+              </NavItem>
+              <NavItem style={{marginRight: "10px"}}>
+                <NavLink href="../how"><p>How This Works</p></NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                <p><DropdownToggle nav caret style={{marginRight: "10px"}}>
