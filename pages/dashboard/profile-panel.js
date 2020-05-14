@@ -17,6 +17,7 @@ class ProfilePanel extends Component {
       lastName: this.props.data.lastName, 
       email: this.props.data.email,
       bio: this.props.data.bio, 
+      school: this.props.data.school,
       submitted: false,
       avatar: this.props.data.avatar,
       isLive: this.props.data.isLive, 
@@ -141,6 +142,7 @@ class ProfilePanel extends Component {
       lastName: this.state.lastName, 
       email: this.state.email,
       bio: this.state.bio,
+      school: this.state.school,
       avatar: this.state.avatar,
       isLive: this.state.isLive
     };
@@ -225,6 +227,24 @@ class ProfilePanel extends Component {
       avatar= <Card style={imageStyle}></Card>
     }
 
+    if (state.bio)
+    {
+      var bio = 
+      <h5>
+        <br/>
+          <b>"</b>{state.bio}<b>"</b><br/>
+        <br/>
+      </h5>
+    }
+    else var bio = <div></div>
+
+    if(state.school)
+    {
+      var school= <p style={{color: "rgba(255, 255, 255, 0.5)"}}>{state.school}</p>
+    }
+    else var school= <div></div>
+    
+
 
 
     var cardContent= 
@@ -232,11 +252,8 @@ class ProfilePanel extends Component {
       {avatar}
       <div style={{textAlign: "center"}}>
       <h4>{state.firstName} {state.lastName}</h4>
-      <h5>
-        <br/>
-          <b>"</b>{state.bio}<b>"</b><br/>
-        <br/>
-      </h5>
+      {school}
+      {bio}
       </div>
       
       {/* <Button outline color="secondary" block onClick= {this.toggle}>See More</Button> */}
@@ -288,6 +305,16 @@ class ProfilePanel extends Component {
                             type="email"
                             id="email"
                             value={this.state.email}
+                            onChange={this.handleInputChange}
+                        />
+                    </FormGroup>
+
+                    <FormGroup>
+                        <Label for="school">University<br/></Label>
+                        <Input
+                            type="text"
+                            id="school"
+                            value={this.state.school}
                             onChange={this.handleInputChange}
                         />
                     </FormGroup>

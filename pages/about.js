@@ -29,8 +29,10 @@ class About extends Component {
             <div style={{position: "fixed", top: "40vh", width:"20vw"}}>
             <h2>About</h2>
             </div>
-            <div style={{position: "fixed", top: "70vh", width:"20vw"}}>
+            <div style={{position: "fixed", top: "60vh", width:"20vw"}}>
             <p><i>Powered by Coffee, Anxiety, and a lotta Love.</i></p>
+            <p>Made by Jordan Lei<br/>UPenn 2020<br/>
+            Like what you see? <a href="https://github.com/jordanlei/senior-yearbook" target = "_blank">Leave a star on Github</a></p>
             </div>
             </Fade>
             </Col>

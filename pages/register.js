@@ -90,9 +90,9 @@ class Register extends Component {
                 if(value.length==0){
                     this.setState({error: "Email field cannot be empty."})
                 }
-                else if (!(value.includes("@") && value.includes("upenn")))
+                else if (!(value.includes("@") && value.includes("edu")))
                 {
-                    this.setState({error: "Please enter a valid Penn email."})
+                    this.setState({error: "Please enter a valid .edu email."})
                 }
                 else
                 {
@@ -223,6 +223,17 @@ class Register extends Component {
                         />
                     </FormGroup>
                     <FormGroup>
+                        <Label for="school">
+                            University / Academic Institution
+                        </Label>
+                        <Input
+                            type="test"
+                            id="school"
+                            value={this.state.school}
+                            onChange={this.handleInputChange}
+                        />
+                    </FormGroup>
+                    <FormGroup>
                         <Label for="email">Email</Label>
                         <Input
                             type="email"
@@ -231,7 +242,7 @@ class Register extends Component {
                             onChange={this.handleInputChange}
                         />
                     </FormGroup>
-                    <div className="center-row" id="submit">
+                    <div className="center-row" id="submit" style={{paddingBottom: "10vh"}}>
                         <Button id="submit" onClick={this.handleSubmit} disabled={this.state.error}>
                                 Submit
                         </Button>

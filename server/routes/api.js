@@ -16,6 +16,7 @@ router.post('/createuser', function(req, res, next) {
     password: req.body.password,
     year: req.body.year,
     email: req.body.email, 
+    school: req.body.school,
     bio: req.body.bio, 
     funFact: req.body.funFact
   });

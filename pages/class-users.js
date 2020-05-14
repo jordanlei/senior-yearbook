@@ -115,6 +115,12 @@ class ClassUsers extends Component{
 
             }
 
+            if(state.school)
+            {
+            var school= <p style={{color: "rgba(255, 255, 255, 0.5)"}}>{state.school}</p>
+            }
+            else var school= <div></div>
+
             var cardContent= 
                 (<div style={{padding: "10%"}}>
                 <div>
@@ -122,6 +128,7 @@ class ClassUsers extends Component{
                 </div>
                 <div style={{textAlign: "center"}}>
                 <h4>{state.firstName} {state.lastName}</h4>
+                {school}
                 </div>
                 {bio}
                 <a href={"/view/" + state.username}>
@@ -133,7 +140,12 @@ class ClassUsers extends Component{
 
             if (state.isLive)
             {
-                var user = (state.username + " " + state.firstName + " " + state.lastName).toLowerCase()
+                if(state.school){
+                    var schoolname = state.school
+                }
+                else var schoolname = ""
+
+                var user = (state.username + " " + state.firstName + " " + state.lastName + schoolname).toLowerCase()
                 var query = this.state.query.toLowerCase()
                 if(user.includes(query))
                 {

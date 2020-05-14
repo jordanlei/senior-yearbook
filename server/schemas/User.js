@@ -19,6 +19,7 @@ var userSchema = new Schema({
     year: Number,
     email: String,
     bio: String,
+    school: String,
     avatar: String,
     isLive: Boolean
     });
