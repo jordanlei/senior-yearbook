@@ -150,7 +150,7 @@
 }
 
 .my-loader {
-  background-image: url("/static/gradcap-dark.png");
+  background-image: url("/static/gradcap-spin.png");
   background-size: cover; 
   background-position: absolute;
   width: 200px;
