@@ -1,4 +1,5 @@
 .layout{
+  -webkit-text-stroke: 0.35px;
   overflow: hidden;
   position: relative;
   font-family: "Open Sans", "Roboto", "Oxygen",
@@ -64,7 +65,7 @@
 
 .layout p{
 	text-transform: none;
-	font-weight: lighter;
+  font-weight: lighter;
   font-size: 20px;
   letter-spacing: 1px;
 }
