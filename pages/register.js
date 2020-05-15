@@ -104,6 +104,11 @@ class Register extends Component {
     }
 
     async handleSubmit (event) {
+        if (this.state.email.includes("upenn")){
+            var tags = "main upenn"
+        }
+        else var tags = "main"
+
         var json = {
             username: this.state.username,
             password: this.state.password, 
@@ -112,7 +117,9 @@ class Register extends Component {
             email: this.state.email,
             bio: this.state.bio, 
             school: this.state.school,
-          };
+            tags: tags,
+            isLive: true,
+        };
     
         try {
           const response = await fetch(`/api/createuser`, {

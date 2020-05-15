@@ -16,7 +16,9 @@ var commentSchema = new Schema({
     from: {type: String, required: true, unique: false},
     comment: {type: String, required: true, unique: false},
     avatar: String,
-    image: String
+    image: String, 
+    tagsfrom: String, 
+    tagsto: String,
     });
 
 

@@ -67,13 +67,22 @@ class ClassUsers extends Component{
     }
 
     renderCards(){
+        var selectData = []
         for( var i = 0; i < this.state.data.length; i++){ 
-            if ( !this.state.data[i].isLive) {
-              this.state.data.splice(i, 1); 
+            if (this.state.data[i].isLive)
+            {
+                if (this.state.data[i].tags)
+                {
+                    if(this.state.data[i].tags.includes("main"))
+                    {
+                        selectData.push(this.state.data[i])
+                    }
+                }
+
             }
         }
 
-        return this.state.data.map((state)=>
+        return selectData.map((state)=>
         {
             var imageStyle=
             {backgroundImage: "url("+ state.avatar +")", 

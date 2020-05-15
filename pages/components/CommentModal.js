@@ -17,6 +17,8 @@ class CommentModal extends Component {
         to: this.props.data.to,
         avatar: this.props.data.avatar,
         comment: this.props.data.comment,
+        tagsfrom: this.props.data.tagsfrom, 
+        tagsto: this.props.data.tagsto,
         submitted: false,
         image: this.props.data.image,
         isOpen: true, 
@@ -75,6 +77,8 @@ class CommentModal extends Component {
             image: this.state.image, 
             avatar: this.state.avatar,
             comment: this.state.comment, 
+            tagsfrom: this.state.tagsfrom, 
+            tagsto: this.state.tagsto,
           };
 
         if (!this.state.firstName || this.state.firstName.length < 2){

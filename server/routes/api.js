@@ -17,8 +17,9 @@ router.post('/createuser', function(req, res, next) {
     year: req.body.year,
     email: req.body.email, 
     school: req.body.school,
-    bio: req.body.bio, 
-    funFact: req.body.funFact
+    bio: req.body.bio,
+    tags: req.body.tags,
+    isLive: req.body.isLive,
   });
   console.log("User Created")
   // save the user to the database
@@ -155,7 +156,9 @@ router.post('/createcomment', function(req, res, next) {
     to: req.body.to,
     comment: req.body.comment,
     avatar: req.body.avatar,
-    image: req.body.image
+    image: req.body.image, 
+    tagsfrom: req.body.tagsfrom,
+    tagsto: req.body.tagsto,
   });
   console.log("Comment Created")
   // save the user to the database

@@ -113,7 +113,18 @@ class ViewUserPage extends Component{
     }
 
     renderCards(){
-        return this.state.data.map((state)=>
+        var selectData = []
+        for( var i = 0; i < this.state.data.length; i++){ 
+            if (this.state.data[i].tagsfrom && this.state.data[i].tagsto)
+            {
+                if (this.state.data[i].tagsfrom.includes("main") && this.state.data[i].tagsto.includes("main"))
+                {
+                    selectData.push(this.state.data[i])
+                }
+            }
+        }
+
+        return selectData.map((state)=>
         {
             var imageStyle=
             {backgroundImage: "url("+ state.avatar +")", 
@@ -316,7 +327,9 @@ class ViewUserPage extends Component{
                         firstName: this.state.fromuser.firstName, 
                         lastName: this.state.fromuser.lastName, 
                         avatar: this.state.fromuser.avatar, 
-                        to: this.state.user.username
+                        to: this.state.user.username, 
+                        tagsfrom: this.state.fromuser.tags, 
+                        tagsto: this.state.user.tags,
                     }
                     commentmodal = <CommentModal data = {data} handleCancel= {this.handleCancel} create/>
                 }
@@ -327,7 +340,14 @@ class ViewUserPage extends Component{
                     <h4 style={{fontSize: "25px"}}>Make A Post</h4>
                 </Button>
                 if(this.state.modalVisible){
-                    commentmodal = <CommentModal data={{from: "anon", to: this.state.user.username}} handleCancel= {this.handleCancel} create anon/>
+                    commentmodal = 
+                    <CommentModal 
+                        data={{
+                            from: "anon", 
+                            to: this.state.user.username, 
+                            tagsfrom: "main", 
+                            tagsto: this.state.user.tags}} 
+                        handleCancel= {this.handleCancel} create anon/>
                 }
             }
         }
