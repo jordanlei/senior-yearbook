@@ -90,7 +90,10 @@ class CommentModal extends Component {
         else if (!this.state.comment || this.state.comment.length <2 ){
           this.setState({error: "Error: Comment is Missing"})
         }
-        else{   
+        else if (this.state.comment.length > 700){
+          this.setState({error: "Error: Please Keep Comments Under 700 Characters"})
+        }
+        else{ 
           try {
             const response = await fetch(`/api/createcomment`, {
               method: 'POST',
@@ -130,31 +133,35 @@ class CommentModal extends Component {
         };
 
         console.log("Updating Comment...")
-    
-        try {
-          const response = await fetch(`/api/updatecomment`, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(json),
-          })
-    
-          if (response.ok) {
-            response.json().then(res => 
-                {
-                    this.setState({error: ''})
-                    Router.push('/view/'+ this.state.to)
-                })
-          } else {
-            // https://github.com/developit/unfetch#caveats
-            this.setState({error: "Comment Failed"})
-          }
-        } catch (error) {
-          console.error(
-            'You have an error in your code or there are Network issues.',
-            error
-          )
+        if (this.state.comment.length > 700){
+          this.setState({error: "Error: Please Keep Comments Under 700 Characters"})
+        }
+        else{
+          try {
+            const response = await fetch(`/api/updatecomment`, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(json),
+            })
+      
+            if (response.ok) {
+              response.json().then(res => 
+                  {
+                      this.setState({error: ''})
+                      Router.push('/view/'+ this.state.to)
+                  })
+            } else {
+              // https://github.com/developit/unfetch#caveats
+              this.setState({error: "Comment Failed"})
+            }
+          } catch (error) {
+            console.error(
+              'You have an error in your code or there are Network issues.',
+              error
+            )
+          }         
         }
     }
 
@@ -314,6 +321,10 @@ class CommentModal extends Component {
                         </FormGroup>
                         <FormGroup>
                             <h5>(Optional) Add A Photo - URL Only</h5>
+                            <p>To get a photo url, right-click on an image and select 
+                              "Open Image in New Tab". Then copy the url and paste it here. 
+                              This can be done for most Facebook images.
+                            </p>
                             <Input
                                 type="text"
                                 id="image"

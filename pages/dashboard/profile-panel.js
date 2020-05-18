@@ -105,9 +105,9 @@ class ProfilePanel extends Component {
             }
             break
         case "bio":
-          if(value.length>500){
-              this.setState({error: "Blurb is too long."})
-              this.setState({description1error: "Description exceeds max length. Count: " + value.length})
+          if(value.length>300){
+              this.setState({error: "Blurb exceeds max length (300 characters). Count: " + value.length})
+              this.setState({description1error: "Description exceeds max length (300 characters). Count: " + value.length})
           }
           else
           {
