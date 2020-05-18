@@ -27,7 +27,7 @@ class How extends Component {
             <Col md={2}>
             <Fade duration={3000}>
             <div style={{position: "fixed", top: "30vh", width:"20vw"}}>
-            <h2>How This Works</h2>
+            <h2>How This Works</h2><br/>
             <p><i>Need Help? Email remotesenioryearbook [at] gmail.com</i></p>
             </div>
             <div style={{position: "fixed", top: "60vh", width:"20vw"}}>
@@ -53,7 +53,7 @@ class How extends Component {
               You'll want to create an account or sign in if you want
               to Edit or Delete these comments after you post them. <br/><br/>
               If you want a page of your own, make an account
-              (Users > Create). Then invite your friends to leave comments / posts!<br/><br/>
+              (Account > Create). Then invite your friends to leave comments / posts!<br/><br/>
               <b>Account and Comment Submissions close on May 29, 2020 11:59 PM EST, after 
               which this site will remain accessible but won't accept new changes.</b>
               </p>
