@@ -1,4 +1,5 @@
 .layout{
+  -webkit-text-stroke: 0.35px;
   overflow: hidden;
   position: relative;
   font-family: "Open Sans", "Roboto", "Oxygen",
