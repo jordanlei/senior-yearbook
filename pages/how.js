@@ -54,7 +54,7 @@ class How extends Component {
               to Edit or Delete these comments after you post them. <br/><br/>
               If you want a page of your own, make an account
               (Account > Create). Then invite your friends to leave comments / posts!<br/><br/>
-              <b>Account and Comment Submissions close on May 29, 2020 11:59 PM EST, after 
+              <b>Account and Comment Submissions close on June 5, 2020 11:59 PM EST, after 
               which this site will remain accessible but won't accept new changes.</b>
               </p>
               </Fade>
