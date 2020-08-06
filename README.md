@@ -1,7 +1,12 @@
 # 2020 Yearbook
 This repository is for the 2020 yearbook to celebrate senior year, compiled for remote yearbook signing.
 As of the most recent version, it supports user login as well as posting comments 
-and images. Data is stored in MongoDB Atlas. Live at: https://bellseniors.herokuapp.com
+and images. Data is stored in MongoDB Atlas. Check out the [live version here.](https://senioryearbook.herokuapp.com/)
+
+# About
+This is a yearbook, just like the physical one we might have if it didn't feel like the world was ending. The idea behind this website is to bring us all a little closer and get a chance to celebrate what we've achieved.
+You can visit people's pages and leave comments by posting on their wall (no account needed). You'll want to create an account or sign in if you want to Edit or Delete these comments after you post them.
+
 
 # React-App Details Below
 
