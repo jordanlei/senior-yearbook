@@ -26,7 +26,7 @@
     "mongodb": "^3.2.5",
     "mongoose": "^5.7.5",
     "morgan": "^1.9.1",
-    "next": "^8.0.3",
+    "next": "^13.0.2",
     "next-cookies": "^1.1.2",
     "react": "^16.8.6",
     "react-addons-css-transition-group": "^15.6.2",
